@@ -1,0 +1,26 @@
+.navbar-cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(14, 14, 14);
+}
+.navbar-cont-img img{
+    width: 10rem;
+}
+
+.navbar-cont-links{
+    display: flex;
+    justify-content:space-between;
+    width: 15rem;
+}
+.navbar-links{
+    color: white;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
