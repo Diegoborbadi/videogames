@@ -1,0 +1,26 @@
+.about-container {
+    text-align: center;
+    margin: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 251, 3);
+    width: 80vw;
+    margin: auto;
+    height: 30vw;
+    margin-top: 80px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 200px; /* Tamaño de la imagen */
+    height: 200px; /* Tamaño de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+.about-content p {
+    font-size: 18px; /* Tamaño de la letra del párrafo */
+}

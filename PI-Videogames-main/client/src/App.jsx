@@ -11,10 +11,10 @@ const App = () => {
   return (
       <div className="App-page">
           <Route exact path={"/"} component={Landing}/>
-          <Route path={["/home", "/drivers/:id", "/create","/about"]} component={Navbar}/>
+          <Route path={["/home", "/videogame/:id", "/create","/about"]} component={Navbar}/>
           <Switch>
               <Route path={"/home"} component={Home}/>
-              <Route path={"/drivers/:id"} component={Detail}/>
+              <Route path={"/videogame/:id"} component={Detail}/>
               <Route path={"/create"} component={Create}/>
               <Route path={"/about"} component={About}/>
           </Switch>

@@ -1,0 +1,59 @@
+.container {
+  width: 100%; /* Cambiamos el ancho a 100% para que ocupe toda la página */
+  background-color: yellow;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.driver-info {
+  display: flex; /* Usamos flexbox para alinear elementos */
+  justify-content: space-between; /* Distribuimos los elementos de forma equitativa */
+  align-items: center; /* Centramos verticalmente los elementos */
+  margin-bottom: 20px;
+}
+
+.driver-info h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.driver-info h2 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #555;
+}
+
+.driver-image {
+  flex: 0 0 40%; /* Establecemos un ancho fijo para la imagen */
+}
+
+.driver-image img {
+  width: 100%; /* Ajustamos la imagen para que ocupe todo el ancho del contenedor */
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.driver-details {
+  flex: 0 0 50%; /* Establecemos un ancho fijo para los detalles */
+}
+
+.driver-details label {
+  font-weight: bold;
+}
+
+.driver-details p {
+  margin: 5px 0;
+}
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.loading-text {
+  font-size: 24px; /* Tamaño de fuente más grande */
+}

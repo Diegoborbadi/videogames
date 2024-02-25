@@ -1,17 +1,37 @@
 const infoCleaner = (data) => {
-    if (Array.isArray(data.results)) {
-        return data.results.map((game) => {
+    if (Array.isArray(data)) {
+        return data.map((game) => {
             return {
                 id: game.id,
                 name: game.name,
                 image: game.background_image,
                 genres: game.genres.map(genre => genre.name) 
-        };
+            };
         });
     } else {
         throw new Error("La estructura de datos de la API no es la esperada");
     }
 };
+
+const infoCleanerGenre = (data) => {
+    if (data && data.results) {
+        const cleanedData = data.results.map(genre => ({
+            id: genre.id,
+            name: genre.name,
+            games: genre.games.map(game => game.name)
+        }));   
+        return cleanedData;
+    } else {
+        return [];
+    }
+};
+
+
+
+
+
+
+
 const infoCleanerDetail = (data) => {
     if (data && typeof data === 'object') {
         return {
@@ -33,4 +53,4 @@ const infoCleanerDetail = (data) => {
 
 
 
-module.exports = { infoCleaner,infoCleanerDetail };
+module.exports = { infoCleaner,infoCleanerDetail,infoCleanerGenre };

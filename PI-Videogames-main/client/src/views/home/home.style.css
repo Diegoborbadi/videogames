@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:rgb(49, 58, 58);
+    text-align: center;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

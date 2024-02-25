@@ -1,0 +1,38 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 25px;
+    cursor: pointer;
+    transform: translateZ(0);
+    transition: trasnform 0.25s ease-out;
+    text-align: center;
+    margin: 10px; /* Agrega un margen entre las cards */
+    width: 200px; /* Establece un ancho fijo para todas las cards */
+
+
+}
+.card-container:hover{
+    transform: scale(1.05);
+}
+.card-container img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    max-height: 200px; /* Establece una altura máxima para evitar que las imágenes sean demasiado grandes */
+    object-fit: cover; /* Mantiene la proporción de aspecto original y cubre el área designada */
+    border-radius: 8px; /* Opcional: Agrega bordes redondeados */
+    margin-bottom: 10px; /* Agrega margen inferior para separar la imagen del texto */
+  }
+  .card-container h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  .card-container h5 {
+    font-size: 18px;
+    color:chocolate;
+  }
+  .card-container h2:hover {
+    color: blue; /* Cambia el color a azul cuando se pasa el mouse sobre el h2 */
+  }

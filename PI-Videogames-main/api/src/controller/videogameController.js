@@ -2,21 +2,30 @@ const { Videogame } = require("../db");
 const { infoCleaner, infoCleanerDetail } = require("../utils");
 const axios = require("axios");
 
+
 const getAllvideoGamesController = async () => {
-  try {
-      const videogameDb = await Videogame.findAll();
-      const response = await axios.get("https://api.rawg.io/api/games?key=32358ac92bd340c782b6c13d437a250f");
-      const infoApi = response.data;
-      const videogameApi = infoCleaner(infoApi);
-      if (!videogameApi) {
-          throw new Error("Error al limpiar los datos de la API");
+    try {
+      let allVideoGames = [];
+      let nextPage = "https://api.rawg.io/api/games?key=32358ac92bd340c782b6c13d437a250f";
+      let pageCount = 0;
+      while (nextPage && pageCount < 5) {
+        const response = await axios.get(nextPage);
+       // console.log(response.data);    
+        const { results, next } = response.data;
+        const cleanedResults = infoCleaner(results);
+        allVideoGames.push(...cleanedResults);  
+        nextPage = next;
+        pageCount++;
       }
-      return [...videogameDb, ...videogameApi];
-  } catch (error) {
+      return allVideoGames;
+    } catch (error) {
       console.error("Error al obtener datos de la API:", error.message);
       return [];
-  }
-}
+    }
+  };
+  
+  
+
 const getVideoGamesDetailsByIdController = async (id) => {
     try {
         const gameDetailsDB = await Videogame.findAll();

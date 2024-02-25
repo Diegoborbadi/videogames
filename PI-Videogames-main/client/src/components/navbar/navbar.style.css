@@ -4,9 +4,11 @@
     align-items: center;
     background-color: rgb(14, 14, 14);
 }
-.navbar-cont-img img{
-    width: 10rem;
+.navbar-cont-img img {
+    width: 6rem; /* Cambia el tamaño de la imagen según tus preferencias */
+    height: auto; /* Ajusta automáticamente la altura para mantener la proporción */
 }
+
 
 .navbar-cont-links{
     display: flex;
